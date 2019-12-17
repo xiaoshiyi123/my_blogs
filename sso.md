@@ -2,7 +2,7 @@
 title: 如何实现单点登录(sso)
 date: 2019-12-15 18:38:45
 mp3: http://xiaoshiyi.top:9000/statics/1-04 Fairy.mp3
-cover: http://xiaoshiyi.top:9000/statics/e74fbf03f3715ed88a1ef4344b241b66.jpg
+cover: http://xiaoshiyi.top:9000/statics/wapper1.jpg
 categories: 
     - 方案
 ---
