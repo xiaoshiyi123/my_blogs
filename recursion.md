@@ -8,7 +8,7 @@ tags:
     - 算法
     - 基础
 mp3: http://xiaoshiyi.top:9000/statics/1-04 Fairy.mp3
-cover: http://xiaoshiyi.top:9000/statics/e74fbf03f3715ed88a1ef4344b241b66.jpg
+cover: http://xiaoshiyi.top:9000/statics/wapper1.jpg
 ---
 ### 简介
 递归是一种技术
