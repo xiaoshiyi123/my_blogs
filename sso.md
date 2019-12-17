@@ -3,6 +3,8 @@ title: 如何实现单点登录(sso)
 date: 2019-12-15 18:38:45
 mp3: http://xiaoshiyi.top:9000/statics/1-04 Fairy.mp3
 cover: http://xiaoshiyi.top:9000/statics/e74fbf03f3715ed88a1ef4344b241b66.jpg
+categories: 
+    - 方案
 ---
 ### 简介
 单点登录(Single Sign On)是在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统的保护资源，若用户在某个应用系统中进行注销登录，
