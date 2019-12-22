@@ -11,10 +11,8 @@ mp3: http://xiaoshiyi.top:9000/statics/1-04 Fairy.mp3
 cover: http://xiaoshiyi.top:9000/statics/wapper1.jpg
 ---
 ### 简介
-递归是一种技术，这种技术通过一个函数在执行过程中一次或者多次调用其本身，或者通过一种数据结构在其表示中依赖于相同
-类型的机构更小的实例。  
-在计算中，递归提供了用于执行迭代任务的优雅并且强大的替代方案。在数据结构和算法研究中，递归是一种重要的技术。接下
-来回从三个递归使用例证开始，并给出Python实现。
+递归是一种技术，这种技术通过一个函数在执行过程中一次或者多次调用其本身，或者通过一种数据结构在其表示中依赖于相同类型的机构更小的实例。  
+在计算中，递归提供了用于执行迭代任务的优雅并且强大的替代方案。在数据结构和算法研究中，递归是一种重要的技术。接下来会从三个递归使用例证开始，并给出Python实现。
 ### 说明性的例子
 #### 阶乘函数
 一个正整数的n的阶乘表示为n!，它被定义为整数1到n的乘积。如果n = 0，那么按照惯例n!被定义为1。
@@ -43,6 +41,20 @@ def binary_search(data, target, low, high):
 ```
 
 #### 文件系统
-现代操作系统用递归的方式来定义文件系统目录(有时也称为"文件夹")。也就是说，一个文件系统包括一个
-顶级目录，这个目录的内容包括文件和其他目录，其他目录又可以包含文件和其他目录，以此类推。
+现代操作系统用递归的方式来定义文件系统目录(有时也称为"文件夹")。
+也就是说，一个文件系统包括一个顶级目录，这个目录的内容包括文件和其他目录，其他目录又可以包含文件和其他目录，以此类推。
 ![4-6](http://xiaoshiyi.top:9000/statics/Data%20Structures%20and%20Algorithms%20in%20Python/Chapter4/4-6.png)
+报告一个文件系统磁盘空间使用情况的递归函数
+```python
+import os
+
+def disk_usage(path):
+    """Return the number of bytes used by a file/folder and any descendents"""
+    total = os.path.getsize(path)
+    if os.path.isdir(path):
+        for filename in os.listdir(path):
+            chlidpath = os.path.join(path, filename)
+            total += disk_usage(chlidpath)
+    print("{0:<7}".format(total), path)
+    return total
+```
