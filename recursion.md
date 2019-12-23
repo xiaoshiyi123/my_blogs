@@ -58,3 +58,17 @@ def disk_usage(path):
     print("{0:<7}".format(total), path)
     return total
 ```
+
+### 递归算法的不足
+虽然递归是一种非常强大的工具，但它也是容易被误用。在这里，我们检查几个问题：一个糟糕的递归实现导致严重的效率低下，并讨论了一些用于识别和避免这种陷阱的策略。
+#### 一个低效的计算斐波那契数的递归算法
+```python
+def bad_fibonacci(n):
+    """Return the nth Fibonacci number"""
+    if n <= 1:
+        return n
+    else:
+        return bad_fibonacci(n-2) + bad_fibonacci(n-1)
+```
+不幸的是，这样的斐波那契数公式的直接实现会导致函数的效率非常低。以这种方式计算第n个斐波那契数需要对这个函数进行指数级别的调用:
+![4-7](http://xiaoshiyi.top:9000/statics/Data%20Structures%20and%20Algorithms%20in%20Python/Chapter4/4-7.png)
