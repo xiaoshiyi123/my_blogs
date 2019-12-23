@@ -9,6 +9,7 @@ tags:
     - 基础
 mp3: http://xiaoshiyi.top:9000/statics/1-04 Fairy.mp3
 cover: http://xiaoshiyi.top:9000/statics/wapper1.jpg
+mathjax: true
 ---
 ### 简介
 递归是一种技术，这种技术通过一个函数在执行过程中一次或者多次调用其本身，或者通过一种数据结构在其表示中依赖于相同类型的机构更小的实例。  
