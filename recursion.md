@@ -11,9 +11,24 @@ mp3: http://xiaoshiyi.top:9000/statics/1-04 Fairy.mp3
 cover: http://xiaoshiyi.top:9000/statics/wapper1.jpg
 mathjax: true
 ---
-[TOC]
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-### [简介]()
+- [简介](#%E7%AE%80%E4%BB%8B)
+- [说明性的例子](#%E8%AF%B4%E6%98%8E%E6%80%A7%E7%9A%84%E4%BE%8B%E5%AD%90)
+  - [阶乘函数](#%E9%98%B6%E4%B9%98%E5%87%BD%E6%95%B0)
+  - [二分查找](#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE)
+  - [文件系统](#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F)
+- [递归算法的不足](#%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E7%9A%84%E4%B8%8D%E8%B6%B3)
+  - [一个低效的计算斐波那契数的递归算法](#%E4%B8%80%E4%B8%AA%E4%BD%8E%E6%95%88%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E7%9A%84%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95)
+  - [一个高效的计算斐波那契数列的递归算法](#%E4%B8%80%E4%B8%AA%E9%AB%98%E6%95%88%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%E7%9A%84%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95)
+  - [Python中的最大递归深度](#python%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E9%80%92%E5%BD%92%E6%B7%B1%E5%BA%A6)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+### 简介
 
 递归是一种技术，这种技术通过一个函数在执行过程中一次或者多次调用其本身，或者通过一种数据结构在其表示中依赖于相同类型的机构更小的实例。  
 在计算中，递归提供了用于执行迭代任务的优雅并且强大的替代方案。在数据结构和算法研究中，递归是一种重要的技术。接下来会从三个递归使用例证开始，并给出Python实现。
