@@ -11,7 +11,10 @@ mp3: http://xiaoshiyi.top:9000/statics/1-04 Fairy.mp3
 cover: http://xiaoshiyi.top:9000/statics/wapper1.jpg
 mathjax: true
 ---
-### 简介
+[TOC]
+
+### [简介]()
+
 递归是一种技术，这种技术通过一个函数在执行过程中一次或者多次调用其本身，或者通过一种数据结构在其表示中依赖于相同类型的机构更小的实例。  
 在计算中，递归提供了用于执行迭代任务的优雅并且强大的替代方案。在数据结构和算法研究中，递归是一种重要的技术。接下来会从三个递归使用例证开始，并给出Python实现。
 ### 说明性的例子
@@ -83,4 +86,29 @@ $$
 &c_6& = 1+c_4+c_5 = 1+9+15 = 25\\
 \end{eqnarray*}
 $$
-如果遵循这个模式继续下去，我们可以看到，对于每两个连续的指标，后者的数量将是前者的2倍以上。也就是说，$c_4$是$c_2$的两倍以上，$c_5$是$c_3$的两倍以上，以此类推。因此，$c_n>2^{n/2}$意味着bad_fibonacci(n)使得调用的总数是n的指数级。d
+如果遵循这个模式继续下去，我们可以看到，对于每两个连续的指标，后者的数量将是前者的2倍以上。也就是说，$c_4$是$c_2$的两倍以上，$c_5$是$c_3$的两倍以上，以此类推。因此，$c_n>2^{n/2}$意味着bad_fibonacci(n)使得调用的总数是n的指数级。
+
+#### 一个高效的计算斐波那契数列的递归算法
+
+```python
+def good_fibonacci(n):
+  """Return pair of Feibonacci numbers, F(n) and F(n-1)"""
+  if n <= 1:
+    return (n, 0)
+  else:
+    a, b = good_fibonacci(n-1)
+    return a+b, a
+```
+
+#### Python中的最大递归深度
+
+为了避免无限递归，Python的设计者做了一个决定来限制同时有效激活的函数的总数。这个极限的精确值取决于Python分配，但典型的默认值是1000。如果达到这个限制，Python解释器就生成一个RuntimeError消息：超过最大递归深度（maximum recursion depth exceeded）。
+
+当然，Python解释器可以动态地重置，以更改默认的递归限制。用sys模块可以实现，支持getrecursionlimit函数和setrecursionlimit函数。示例如下：
+
+```python
+import sys
+old = sys.getrecursionlimit()    # perhaps 1000 is typical
+sys.setrecursionlimit(1000000)   # change to allow 1 million nested calls
+```
+
