@@ -13,7 +13,6 @@ mathjax: true
 ---
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [简介](#%E7%AE%80%E4%BB%8B)
 - [说明性的例子](#%E8%AF%B4%E6%98%8E%E6%80%A7%E7%9A%84%E4%BE%8B%E5%AD%90)
